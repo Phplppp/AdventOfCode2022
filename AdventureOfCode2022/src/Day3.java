@@ -342,11 +342,6 @@ public class Day3 {
 			}
 			
 			sum+= index;
-			
-			//System.out.println(index);
-			//System.out.println(commonLetter);
-			//System.out.println(comp1+ " " + comp2);
-			
 		}
 		sum=0;
 		//forschleife für teilaufgabe 2
