@@ -110,6 +110,7 @@ public class Day5 {
 	      e.printStackTrace();
 	    }
 	    
+	 
 //	    converts elements from list to an array
 	   input = new String[lines.size()];
 	   
@@ -118,6 +119,8 @@ public class Day5 {
 	    	//System.out.println(numbers[i]);
 	    }
 	}
+	
+
 	    
 	  
 	  

@@ -5,16 +5,11 @@ public class Testclass {
 
 	public static void main(String[] args) {
 		
-		ArrayList <String> base = new ArrayList<String>();
-		base.add("G");
-		base.add("F");
-		base.add("H");
+		String test = "earsdgtjk";
+		String[] chararray = test.split("");
 		
-		Collections.reverse(base);
-		
-		for(String item: base) {
-			System.out.println(item);
-		}
+		for (String i: chararray) System.out.println(i);
 	}
+	
 
 }
