@@ -27,8 +27,10 @@ public class Day6 {
 		int answer = 0;
 		int index = 0;
 		for(int i = amountChars; i < chararray.length; i++) {
+			
 			chars.clear();
 			index = 0;
+			
 			for(int x = 0; x< amountChars; x++) {
 				chars.add(chararray[i-index]);
 				packet[x] = chararray[i-index];
@@ -37,9 +39,9 @@ public class Day6 {
 
 			//get char
 			//removes char from packet-string and compare with other chars in string
-			// if char equals to one of chars in packet-string: value++
+			// if char matches one of the chars in packet-string: value++
 			// else value = 0
-			// --> if value = 0; every char in packet-string is different
+			// --> if value = 0; every char in packet-string is different --> answer
 			
 			for(int j = 0; j < packet.length; j++) {
 				String packageString ="";
@@ -47,13 +49,12 @@ public class Day6 {
 				for(int d = 0; d<chars.size();d++) {
 					packageString += chars.get(d);
 				}
-				//String packageString = char0 + char1 + char2 + char3 ;
 				packageString = packageString.replaceFirst(packet[j], "");
 				if(packageString.contains(packet[j])) value++;
 				else value+=0;
 			}
-			//leave loop if first sequence with different chars
-			//print index = answer
+			//leave loop if first sequence with different chars appears
+			//print index which is the answer
 			if(value == 0) { answer = i+1; break;}
 			else value = 0;
 			
